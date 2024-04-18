@@ -3,7 +3,7 @@ class MovieFinder extends React.Component {
         super (props);
         this.state = {
             searchTerm : '',
-            result : [],
+            results : [],
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -19,7 +19,7 @@ class MovieFinder extends React.Component {
     }
 
     render() {
-        const {searchTerm, result} = this.state;
+        const {searchTerm, results} = this.state;
 
         return (
             <div className="container">
@@ -35,7 +35,7 @@ class MovieFinder extends React.Component {
                             />
                             <button type="submit" className="btn btn-primary">Submit</button>
                         </form>
-                        {result.map((movie) => {
+                        {results.map((movie) => {
                             return null;
                         })}
                     </div>
